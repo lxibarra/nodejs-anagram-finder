@@ -44,4 +44,10 @@ describe("Test App", function(){
           });
     });
 
+    describe("Test words error cases", function() {
+        it("Error message returned when word is not in dictionary", function() {
+            expect(dictionary.findAnagrams('newword')).to.equal('newword not in Dictionary');
+        });
+    });
+
 });
